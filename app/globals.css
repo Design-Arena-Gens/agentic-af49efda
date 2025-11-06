@@ -1,0 +1,217 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #fff;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px 60px;
+  background: linear-gradient(135deg, rgba(15, 12, 41, 0.9), rgba(48, 43, 99, 0.8));
+  border-radius: 20px;
+  margin: 40px 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  color: #b8b8d1;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.nav-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin: 40px 20px;
+}
+
+.nav-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  padding: 15px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.nav-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(102, 126, 234, 0.6);
+}
+
+.nav-button.active {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  box-shadow: 0 6px 25px rgba(240, 147, 251, 0.6);
+}
+
+.content-section {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 50px;
+  margin: 30px 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.content-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.content-section h3 {
+  font-size: 1.8rem;
+  margin: 30px 0 15px;
+  color: #a8a8d8;
+}
+
+.content-section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #d0d0e8;
+  margin-bottom: 20px;
+}
+
+.content-section ul, .content-section ol {
+  margin: 20px 0;
+  padding-left: 30px;
+}
+
+.content-section li {
+  font-size: 1.1rem;
+  color: #d0d0e8;
+  margin: 10px 0;
+}
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.pillar-card {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+  border: 2px solid rgba(102, 126, 234, 0.3);
+  border-radius: 15px;
+  padding: 30px;
+  transition: all 0.3s ease;
+}
+
+.pillar-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(102, 126, 234, 0.6);
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
+.pillar-card h3 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.rules-list {
+  counter-reset: rule-counter;
+  list-style: none;
+  padding: 0;
+}
+
+.rules-list li {
+  counter-increment: rule-counter;
+  margin: 25px 0;
+  padding-left: 60px;
+  position: relative;
+}
+
+.rules-list li::before {
+  content: counter(rule-counter);
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.quote-box {
+  background: linear-gradient(135deg, rgba(240, 147, 251, 0.1), rgba(245, 87, 108, 0.1));
+  border-left: 4px solid #f5576c;
+  padding: 25px;
+  margin: 30px 0;
+  font-style: italic;
+  font-size: 1.2rem;
+  border-radius: 10px;
+}
+
+.footer {
+  text-align: center;
+  padding: 40px 20px;
+  color: #8888aa;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  .content-section {
+    padding: 30px 20px;
+  }
+
+  .content-section h2 {
+    font-size: 2rem;
+  }
+
+  .pillars-grid {
+    grid-template-columns: 1fr;
+  }
+}
